@@ -1,0 +1,103 @@
+.services-container {
+  padding: 20px;
+  color: #ffffff;
+  background-color: #f0f0f0; /* Added background color for better contrast */
+}
+
+.services-title {
+  font-size: 36px; /* Default size for larger screens */
+  font-weight: bold;
+  color: #1c1c1c;
+  margin-bottom: 10px;
+}
+
+.services-subtitle {
+  font-size: 18px;
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+/* Card container */
+.services-card {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid rgb(102, 102, 102);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.services-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image within the card */
+.services-image {
+  width: 100%; /* Full width for responsive images */
+  max-width: 300px; /* Maintain maximum width */
+  height: auto; /* Auto height to maintain aspect ratio */
+  margin-right: 20px;
+}
+
+/* Text container */
+.services-description {
+  max-width: 900px; /* Limit text width for better readability */
+}
+
+.services-title {
+  font-size: 30px; /* Default size for card titles */
+  font-weight: bold;
+  color: #1c1c1c;
+  margin-bottom: 10px;
+}
+
+.services-text {
+  font-size: 20px; /* Default size for service text */
+  color: #666666;
+  line-height: 1.5;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .services-card {
+    flex-direction: column; /* Stack card contents vertically on smaller screens */
+    align-items: flex-start; /* Align items to start for better layout */
+  }
+
+  .services-image {
+    margin: 0 0 15px 0; /* Remove right margin and add bottom margin */
+    max-width: 100%; /* Allow image to take full width */
+  }
+
+  .services-title {
+    font-size: 28px; /* Slightly smaller title for mobile */
+  }
+
+  .services-subtitle {
+    font-size: 16px; /* Adjust subtitle for mobile */
+  }
+
+  .services-text {
+    font-size: 18px; /* Adjust service text size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .services-title {
+    font-size: 24px; /* Further adjust title size for very small devices */
+  }
+
+  .services-subtitle {
+    font-size: 14px; /* Further adjust subtitle size */
+  }
+
+  .services-text {
+    font-size: 16px; /* Further adjust service text size */
+  }
+
+  .services-container {
+    padding: 15px; /* Adjust padding for smaller devices */
+  }
+}

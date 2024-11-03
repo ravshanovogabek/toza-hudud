@@ -1,0 +1,109 @@
+.disinfection-service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px;
+  background-color: #ffffff;
+}
+
+.text-container {
+  max-width: 40%;
+}
+
+.text-container h1 {
+  font-size: 80px; /* Large font size for desktops */
+  font-weight: bold;
+  color: #0043ce;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.text-container p {
+  font-size: 18px;
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.ios-button {
+  background-color: #0043ce;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 67, 206, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ios-button:hover {
+  transform: scale(1.05);
+  background-color: #0033a1;
+  box-shadow: 0 10px 20px rgba(0, 67, 206, 0.4);
+}
+
+.image-container {
+  max-width: 70%;
+  margin-top: 65px;
+}
+
+.disinfect-image {
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .disinfection-service {
+      flex-direction: column; /* Stack elements vertically */
+      text-align: center; /* Center text for mobile */
+      padding: 20px; /* Reduce padding */
+  }
+
+  .text-container {
+      max-width: 90%; /* Full width for mobile */
+  }
+
+  .text-container h1 {
+      font-size: 48px; /* Smaller font size for mobile */
+      margin-bottom: 30px; /* Adjust margin */
+  }
+
+  .text-container p {
+      font-size: 16px; /* Adjust font size for mobile */
+      margin-bottom: 20px; /* Adjust margin */
+  }
+
+  .ios-button {
+      padding: 12px 24px; /* Reduce button padding */
+      font-size: 16px; /* Adjust button font size */
+  }
+
+  .image-container {
+      margin-top: 20px; /* Space above image */
+      max-width: 100%; /* Full width for mobile */
+  }
+
+  .disinfect-image {
+      max-width: 100%; /* Image should not exceed container width */
+  }
+}
+
+@media (max-width: 480px) {
+  .text-container h1 {
+      font-size: 36px; /* Further reduce font size for very small screens */
+      margin-top: 50px; /* Adjust margin */
+  }
+
+  .text-container p {
+      font-size: 14px; /* Smaller font size for better fit */
+      margin-bottom: 15px; /* Adjust margin */
+  }
+
+  .ios-button {
+      padding: 10px 20px; /* Further reduce button padding */
+      font-size: 14px; /* Smaller button font size */
+  }
+}

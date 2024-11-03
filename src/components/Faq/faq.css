@@ -1,0 +1,111 @@
+.faq-container {
+    max-width: 1000px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    font-family: Arial, sans-serif; /* Font family for the text */
+    background-color: #f9f9f9; /* Light background for the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    padding: 20px; /* Inner padding for content */
+}
+
+.faq-title {
+    font-size: 24px; /* Font size for the title */
+    font-weight: bold; /* Bold font weight for emphasis */
+    color: #164dda; /* Title color */
+    margin-bottom: 20px; /* Space below the title */
+    text-align: center; /* Center the title */
+}
+
+.faq-item {
+    border-top: 1px solid #e0e0e0; /* Light border for separation */
+    padding: 15px 0; /* Padding for spacing within items */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.faq-item:hover {
+    background-color: #f1f1f1; /* Light background on hover */
+}
+
+.faq-question {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between question and arrow */
+    align-items: center; /* Center align vertically */
+    font-size: 22px; /* Font size for the question */
+    font-weight: 500; /* Semi-bold font weight */
+    color: #4B4E68; /* Color for the question text */
+    cursor: pointer; /* Pointer cursor for clickable questions */
+}
+
+.faq-arrow {
+    transition: transform 0.3s ease; /* Smooth transition for arrow rotation */
+    font-size: 18px; /* Slightly larger arrow */
+    color: #4B4E68; /* Consistent arrow color */
+}
+
+.faq-arrow.open {
+    transform: rotate(180deg); /* Arrow rotation for open state */
+}
+
+.faq-answer {
+    /* Padding for the answer text */
+    font-size: 16px; /* Font size for the answer */
+    color: #4B4E68; /* Color for the answer text */
+    line-height: 1.5; /* Better line height for readability */
+    border-left: 3px solid #0e4dec; /* Left border for emphasis */
+    margin-left: 20px; /* Space between text and border */
+    overflow: hidden; /* Prevent overflow when collapsing */
+    max-height: 0; /* Initially collapsed */
+    transition: max-height 0.5s ease, padding 0.5s ease; /* Smooth transition for height */
+}
+
+.faq-answer.open {
+    max-height: 200px; /* Set max-height for opening effect */
+    padding: 10px 0; /* Set padding when open */
+}
+
+.faq-icon {
+    font-size: 24px; /* Size for the icon */
+    margin-right: 10px; /* Space between icon and text */
+    color: #0640d2; /* Icon color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .faq-title {
+        font-size: 20px; /* Smaller title size for mobile */
+    }
+
+    .faq-question {
+        font-size: 18px; /* Smaller question size for mobile */
+    }
+
+    .faq-answer {
+        font-size: 14px; /* Smaller answer size for mobile */
+    }
+
+    .faq-icon {
+        font-size: 20px; /* Smaller icon for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-container {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    .faq-title {
+        font-size: 18px; /* Even smaller title size */
+    }
+
+    .faq-question {
+        font-size: 16px; /* Adjust question size */
+    }
+
+    .faq-answer {
+        font-size: 14px; /* Adjust answer size */
+        
+    }
+
+    .faq-arrow {
+        font-size: 16px; /* Smaller arrow size */
+    }
+}

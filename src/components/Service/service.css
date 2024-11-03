@@ -1,0 +1,190 @@
+/* Base styling */
+.service-container {
+  padding: 20px;
+}
+
+.service-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #001041;
+  margin-bottom: 20px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center the cards */
+}
+
+/* Card styling */
+.service-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: calc(33.33% - 20px);
+  
+  
+}
+
+
+
+.service-card-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #001041;
+  margin-bottom: 10px;
+}
+
+.service-card-description {
+  font-size: 1rem;
+  color: #312f2f;
+  margin-bottom: 20px;
+}
+
+.service-card-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.service-card-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Button styling */
+.service-button {
+  background-color: #0558fe;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-button:hover {
+  background-color: #003080;
+}
+
+/* Guarantee Section */
+.guarantee-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.guarantee-image {
+  width: 100%;
+  max-width: 750px;
+  border-radius: 10px;
+}
+
+.guarantee-text {
+  color: white;
+  font-size: 1.75rem;
+  max-width: 60%;
+  margin-left: 2rem;
+}
+
+.guarantee-text p {
+  margin-bottom: 20px;
+}
+
+.guarantee-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.guarantee-icon {
+  width: 72px;
+  height: 72px;
+  color: #ff8c00;
+}
+
+/* Responsive adjustments */
+
+/* Medium screens */
+@media (max-width: 1024px) {
+  .service-card {
+    width: calc(50% - 20px); /* Two cards per row */
+  }
+
+  .guarantee-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .guarantee-text {
+    max-width: 100%;
+    margin-left: 0;
+    font-size: 1.5rem;
+  }
+
+  .guarantee-image {
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .service-title {
+    font-size: 1.75rem;
+  }
+
+  .service-card {
+    width: calc(100% - 20px); /* Single card per row */
+  }
+
+  .service-card-title {
+    font-size: 1.5rem;
+  }
+
+  .service-card-description {
+    font-size: 0.875rem;
+  }
+
+  .guarantee-text {
+    font-size: 1.25rem;
+  }
+
+  .guarantee-image {
+    max-width: 300px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .service-title {
+    font-size: 1.5rem;
+  }
+
+  .service-card-title {
+    font-size: 1.25rem;
+  }
+
+  .service-card-description {
+    font-size: 0.875rem;
+  }
+
+  .guarantee-text {
+    font-size: 1rem;
+  }
+
+  .guarantee-header {
+    font-size: 1.25rem;
+  }
+}

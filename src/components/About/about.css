@@ -1,0 +1,173 @@
+.about-section {
+  padding: 40px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.about-heading {
+  font-size: 50px; /* Default size for larger screens */
+  font-weight: bold;
+  color: #0043ce;
+  margin-bottom: 40px;
+}
+
+/* Styles for new image-text section */
+.image-text-section {
+  position: relative; 
+  width: 100%;
+  overflow: hidden; 
+  border-radius: 10px; 
+}
+
+.full-width-image {
+  width: 100%; 
+  height: 600px; 
+  display: block; 
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+.overlayer-text {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  text-align: left; /* Center text */
+  color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for visibility */
+  padding: 20px; 
+  border-radius: 10px; 
+}
+
+.overlayer-text h2 {
+  font-size: 46px; /* Default heading size */
+  line-height: 1.2;
+  margin-bottom: 10px; 
+}
+
+.overlayer-text p {
+  font-size: 18px; /* Default paragraph size */
+  margin-bottom: 20px; 
+}
+
+.about-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px; 
+}
+
+/* Individual card styling */
+.about-card {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  
+  flex: 1; /* Allow cards to grow equally */
+  max-width: 30%; /* Keep the card max-width for larger screens */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Styling for the inline SVG icons */
+.about-icon {
+  margin-bottom: 20px;
+  color: #0043ce; /* Color for the icons */
+}
+
+/* Card title */
+.about-title {
+  font-size: 24px; /* Default title size */
+  font-weight: bold;
+  color: #002f9a;
+  margin-bottom: 15px;
+}
+
+/* Card description */
+.about-description {
+  font-size: 16px; /* Default description size */
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Animation for cards */
+@keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(30%);
+  }
+  80% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.about-card {
+  animation: bounceInLeft 1s ease forwards;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .about-cards {
+    flex-direction: column; /* Stack cards vertically */
+  }
+
+  .about-card {
+    max-width: 100%; /* Full width for mobile cards */
+    margin-bottom: 20px; /* Space between cards */
+  }
+
+  .about-heading {
+    font-size: 40px; /* Adjust heading size for mobile */
+  }
+
+  /* Adjust layout for the image-text section on smaller screens */
+  .image-text-section {
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .overlayer-text {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .overlayer-text h2 {
+    font-size: 28px; /* Adjust font size for heading */
+  }
+
+  .overlayer-text p {
+    font-size: 16px; /* Adjust font size for paragraph */
+  }
+
+  /* Ensure the full-width image is responsive */
+  .full-width-image {
+    height: auto; /* Allow height to adjust based on content */
+    max-height: 400px; /* Limit max height on smaller screens */
+  }
+
+  /* Optional: Adjust card animations */
+  .about-card {
+    animation: none; /* Disable animation for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-heading {
+    font-size: 30px; /* Further adjust heading size for small devices */
+  }
+
+  .overlayer-text h2 {
+    font-size: 24px; /* Further adjust heading size for small devices */
+  }
+
+  .overlayer-text p {
+    font-size: 14px; /* Further adjust paragraph size for small devices */
+  }
+}

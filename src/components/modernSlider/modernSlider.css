@@ -1,0 +1,148 @@
+/* modernSlider.css */
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  gap: 15px;
+  position: relative;
+  perspective: 1000px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  padding: 10px;
+}
+
+/* Default card styling */
+.slider-card {
+  position: relative;
+  width: 150px;
+  height: 270px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease, filter 0.4s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  backdrop-filter: brightness(0.85);
+}
+
+/* Active card style */
+.slider-card.active {
+  width: 240px;
+  height: 350px;
+  transform: translateY(-10px) rotate(2deg);
+  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.5), 0px 4px 10px rgba(0, 0, 0, 0.5);
+  filter: none;
+}
+
+/* Gradient overlay */
+.slider-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
+  border-radius: 10px;
+  transition: opacity 0.4s ease;
+}
+
+/* Hover effect */
+.slider-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.slider-container .slider-card:not(.active) {
+  transition: transform 0.5s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-content h3 {
+  margin: 0;
+}
+
+.card-content p {
+  display: none;
+}
+
+.slider-card.active .card-content p {
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .slider-card {
+    width: 180px;
+    height: 300px;
+  }
+
+  .slider-card.active {
+    width: 220px;
+    height: 330px;
+  }
+}
+
+@media (max-width: 992px) {
+  .slider-container {
+    gap: 10px;
+  }
+
+  .slider-card {
+    width: 150px;
+    height: 270px;
+  }
+
+  .slider-card.active {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    height: auto;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .slider-card {
+    width: 120px;
+    height: 220px;
+  }
+
+  .slider-card.active {
+    width: 180px;
+    height: 270px;
+  }
+
+  .card-content h3 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider-container {
+    justify-content: space-evenly;
+    padding: 5px;
+  }
+
+  .slider-card {
+    width: 100px;
+    height: 180px;
+  }
+
+  .slider-card.active {
+    width: 150px;
+    height: 220px;
+  }
+
+  .card-content h3 {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,140 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #ffffff; /* Consider changing to a dark theme color for dark mode support */
+    font-family: 'Roboto', sans-serif; /* Updated font for a modern look */
+    color: #333;
+}
+
+/* Logo Section Styling */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-image {
+    height: 90px;
+}
+
+.footer-title h2 {
+    font-size: 1.6em; /* Increased size for better visibility */
+    color: #0056b3; /* Primary color */
+    margin: 0;
+    font-weight: bold;
+}
+
+.footer-title span {
+    font-size: 0.9em; /* Increased size */
+    color: #666; /* A softer color for subtitle */
+}
+
+/* Contact Section Styling */
+.footer-contact {
+    display: grid; /* Change to grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 20px; /* Gap between grid items */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Icon styling */
+.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    padding: 8px; /* Added padding for better icon spacing */
+    border-radius: 50%; /* Changed to a circle for a modern look */
+}
+
+.icon {
+    font-size: 1.5em; /* Increased icon size */
+    color: #0072ff; /* Primary color for icons */
+}
+
+.external-link {
+    font-size: 0.9em;
+    color: #555;
+    margin-left: auto;
+}
+
+.contact-text {
+    font-size: 1em;
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-text:hover {
+    color: #0072ff;
+}
+
+/* Hover effect for contact item */
+.contact-item:hover {
+    color: #0072ff; /* Change color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Stack items vertically */
+        padding: 20px; /* Reduce padding */
+        text-align: center; /* Center text */
+    }
+
+    .footer-contact {
+        grid-template-columns: 1fr; /* Stack items on small screens */
+        gap: 15px; /* Adjusted gap */
+    }
+
+    .footer-title h2 {
+        font-size: 1.4em; /* Smaller title size */
+    }
+
+    .footer-title span {
+        font-size: 0.8em; /* Smaller subtitle size */
+    }
+
+    .contact-text {
+        font-size: 0.9em; /* Smaller contact text size */
+    }
+
+    .icon {
+        font-size: 1.2em; /* Slightly smaller icon size */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px; /* Further reduce padding */
+    }
+
+    .footer-title h2 {
+        font-size: 1.2em; /* Even smaller title size */
+    }
+
+    .footer-title span {
+        font-size: 0.75em; /* Further reduce subtitle size */
+    }
+
+    .footer-contact {
+        gap: 10px; /* Adjust gap further */
+    }
+
+    .contact-text {
+        font-size: 0.85em; /* Smaller contact text size */
+    }
+
+    .icon {
+        font-size: 1em; /* Reduce icon size for smaller screens */
+    }
+}
